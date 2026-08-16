@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: '20'
       - name: Validate packs
-        run: node scripts/validate.mjs
+        run: npm run validate
       - name: Ensure index is in sync
         run: |
-          node scripts/build-index.mjs
-          git diff --exit-code index.json || (echo "index.json out of date — run node scripts/build-index.mjs" && exit 1)
+          npm run build:index
+          git diff --exit-code index.json || (echo "index.json out of date — run npm run build:index" && exit 1)

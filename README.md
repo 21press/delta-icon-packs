@@ -19,13 +19,34 @@ scripts/
 
 ## Maintainer workflow
 
+```bash
+# After editing packs/{slug}/
+npm run validate
+npm run build:index
+npm run zip -- {slug}          # writes dist/{slug}.zip
+# or one shot:
+npm run prepare:pack -- {slug}
+```
+
 1. Add or edit `packs/{slug}/` (SVGs + `pack.json`).
-2. Run `node scripts/validate.mjs`.
-3. Run `node scripts/build-index.mjs` (updates `index.json`).
-4. Build zip: `chmod +x scripts/pack-zip.sh && ./scripts/pack-zip.sh {slug}`.
-5. Create a GitHub Release tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `delta-basics.zip`.
+2. `npm run validate`
+3. `npm run build:index` (updates `index.json`)
+4. `npm run zip -- {slug}` → `dist/{slug}.zip`
+5. Create a GitHub Release tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `{slug}.zip`.
 6. Confirm `index.json` `download.url` matches the release asset URL.
 7. Merge to `main`. Delta sites: **Icons → Packs → Refresh** (or wait ~12h cache TTL).
+
+CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
+
+| Script | What |
+|--------|------|
+| `npm run validate` | Schema + SVG safety |
+| `npm run build:index` | Regenerate `index.json` (no-op if packs unchanged) |
+| `npm run build:index:force` | Always rewrite `index.json` + bump `updatedAt` |
+| `npm run zip -- <slug>` | Build release zip |
+| `npm run zip:basics` | Zip sample `delta-basics` |
+| `npm run prepare:pack -- <slug>` | validate + index + zip |
+| `npm run check` | CI gate (validate + index in sync) |
 
 ## License
 

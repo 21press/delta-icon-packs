@@ -2,12 +2,14 @@
 /**
  * Rebuild index.json from packs/{slug}/pack.json.
  * Download URLs keep prior index values when present; otherwise placeholder release URL.
- * Usage: node scripts/build-index.mjs
+ * Skips write (and keeps updatedAt) when packs payload unchanged unless --force.
+ * Usage: node scripts/build-index.mjs [--force]
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const force = process.argv.includes( '--force' );
 const root = path.resolve( path.dirname( fileURLToPath( import.meta.url ) ), '..' );
 const packsDir = path.join( root, 'packs' );
 const indexPath = path.join( root, 'index.json' );
@@ -52,6 +54,13 @@ for ( const dir of fs.readdirSync( packsDir ).sort() ) {
 			url: prev.download?.url && prev.version === pack.version ? prev.download.url : defaultUrl,
 		},
 	} );
+}
+
+const prevPacksJson = JSON.stringify( previous.packs || [] );
+const nextPacksJson = JSON.stringify( packs );
+if ( ! force && prevPacksJson === nextPacksJson ) {
+	console.log( `✓ index.json unchanged (${ packs.length } pack(s))` );
+	process.exit( 0 );
 }
 
 const index = {
