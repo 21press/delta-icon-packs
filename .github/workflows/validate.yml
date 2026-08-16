@@ -1,0 +1,21 @@
+name: Validate icon packs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate packs
+        run: node scripts/validate.mjs
+      - name: Ensure index is in sync
+        run: |
+          node scripts/build-index.mjs
+          git diff --exit-code index.json || (echo "index.json out of date — run node scripts/build-index.mjs" && exit 1)
