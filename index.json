@@ -1,25 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T09:37:19.198Z",
+  "updatedAt": "2026-08-17T09:43:43.450Z",
   "packs": [
-    {
-      "slug": "delta-basics",
-      "name": "Delta Basics",
-      "description": "Small starter set of UI icons for Delta Icon Manager.",
-      "version": "1.0.0",
-      "license": "MIT",
-      "iconCount": 4,
-      "previewIcons": [
-        "arrow-right",
-        "check",
-        "menu"
-      ],
-      "homepage": "https://github.com/21press/delta-icon-packs",
-      "download": {
-        "type": "zip",
-        "url": "https://github.com/21press/delta-icon-packs/releases/download/delta-basics-1.0.0/delta-basics.zip"
-      }
-    },
     {
       "slug": "heroicons-micro",
       "name": "Heroicons Micro",
