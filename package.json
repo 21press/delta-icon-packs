@@ -17,6 +17,8 @@
     "check": "npm run validate && npm run build:index && git diff --exit-code -- index.json",
     "import:heroicons": "node scripts/import-heroicons.mjs",
     "import:tablericons": "node scripts/import-tablericons.mjs",
+    "import:lucideicons": "node scripts/import-lucideicons.mjs",
+    "import:feathericons": "node scripts/import-feathericons.mjs",
     "prepare:pack": "npm run validate && npm run build:index && npm run zip --",
     "release:prep": "npm run validate && npm run build:index"
   }

@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T09:48:30.347Z",
+  "updatedAt": "2026-08-17T10:01:07.761Z",
   "packs": [
+    {
+      "slug": "feather",
+      "name": "Feather",
+      "description": "24×24 outline icons from Feather Icons.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 287,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://feathericons.com",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/feather-1.0.0/feather.zip"
+      }
+    },
     {
       "slug": "heroicons-micro",
       "name": "Heroicons Micro",
@@ -72,6 +90,24 @@
       "download": {
         "type": "zip",
         "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-solid-1.0.0/heroicons-solid.zip"
+      }
+    },
+    {
+      "slug": "lucide",
+      "name": "Lucide",
+      "description": "24×24 outline icons from Lucide (ISC).",
+      "version": "1.0.0",
+      "license": "ISC",
+      "iconCount": 1768,
+      "previewIcons": [
+        "house",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://lucide.dev",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/lucide-1.0.0/lucide.zip"
       }
     },
     {

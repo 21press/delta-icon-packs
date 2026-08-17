@@ -64,6 +64,28 @@ Release tags: `tabler-outline-1.0.0`, `tabler-filled-1.0.0`.
 
 > Note: outline has ~5k icons. Delta zip install allows up to 10k entries / 64 MB uncompressed.
 
+### Lucide (from `temp/lucideicons`)
+
+Flat SVG folder — one pack:
+
+```bash
+npm run import:lucideicons
+npm run prepare:pack -- lucide
+```
+
+Release tag: `lucide-1.0.0`.
+
+### Feather (from `temp/feathericons`)
+
+Flat SVG folder — one pack:
+
+```bash
+npm run import:feathericons
+npm run prepare:pack -- feather
+```
+
+Release tag: `feather-1.0.0`.
+
 CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
 
 | Script | What |
