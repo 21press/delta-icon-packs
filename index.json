@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T09:43:43.450Z",
+  "updatedAt": "2026-08-17T09:48:30.347Z",
   "packs": [
     {
       "slug": "heroicons-micro",
@@ -72,6 +72,42 @@
       "download": {
         "type": "zip",
         "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-solid-1.0.0/heroicons-solid.zip"
+      }
+    },
+    {
+      "slug": "tabler-filled",
+      "name": "Tabler Filled",
+      "description": "24×24 filled icons from Tabler Icons.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 1054,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://tabler.io/icons",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-filled-1.0.0/tabler-filled.zip"
+      }
+    },
+    {
+      "slug": "tabler-outline",
+      "name": "Tabler Outline",
+      "description": "24×24 outline icons (2px stroke) from Tabler Icons.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 5130,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://tabler.io/icons",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-outline-1.0.0/tabler-outline.zip"
       }
     }
   ]

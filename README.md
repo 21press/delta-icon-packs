@@ -50,6 +50,20 @@ npm run prepare:pack -- heroicons-micro
 
 Release tags: `heroicons-outline-1.0.0`, `heroicons-solid-1.0.0`, `heroicons-mini-1.0.0`, `heroicons-micro-1.0.0` (attach matching `dist/*.zip`).
 
+### Tabler Icons (from `temp/tablericons`)
+
+Upstream tree: `outline/`, `filled/`. Builds **two** packs:
+
+```bash
+npm run import:tablericons
+npm run prepare:pack -- tabler-outline
+npm run prepare:pack -- tabler-filled
+```
+
+Release tags: `tabler-outline-1.0.0`, `tabler-filled-1.0.0`.
+
+> Note: outline has ~5k icons. Delta zip install allows up to 10k entries / 64 MB uncompressed.
+
 CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
 
 | Script | What |
