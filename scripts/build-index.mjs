@@ -40,14 +40,18 @@ for ( const dir of fs.readdirSync( packsDir ).sort() ) {
 	const prev = prevBySlug.get( pack.slug ) || {};
 	const tag = `${ pack.slug }-${ pack.version }`;
 	const defaultUrl = `https://github.com/21press/delta-icon-packs/releases/download/${ tag }/${ pack.slug }.zip`;
+	const iconSlugs = ( pack.icons || [] ).map( ( i ) => i.slug );
+	const preview = Array.isArray( pack.previewIcons ) && pack.previewIcons.length
+		? pack.previewIcons.filter( ( s ) => iconSlugs.includes( s ) ).slice( 0, 3 )
+		: iconSlugs.slice( 0, 3 );
 	packs.push( {
 		slug: pack.slug,
 		name: pack.name,
 		description: pack.description || '',
 		version: pack.version,
 		license: pack.license || '',
-		iconCount: Array.isArray( pack.icons ) ? pack.icons.length : 0,
-		previewIcons: ( pack.icons || [] ).slice( 0, 3 ).map( ( i ) => i.slug ),
+		iconCount: iconSlugs.length,
+		previewIcons: preview,
 		homepage: pack.homepage || '',
 		download: {
 			type: 'zip',

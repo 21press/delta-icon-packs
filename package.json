@@ -15,6 +15,7 @@
     "zip": "bash scripts/pack-zip.sh",
     "zip:basics": "bash scripts/pack-zip.sh delta-basics",
     "check": "npm run validate && npm run build:index && git diff --exit-code -- index.json",
+    "import:heroicons": "node scripts/import-heroicons.mjs",
     "prepare:pack": "npm run validate && npm run build:index && npm run zip --",
     "release:prep": "npm run validate && npm run build:index"
   }

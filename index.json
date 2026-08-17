@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-16T17:23:13.461Z",
+  "updatedAt": "2026-08-17T09:37:19.198Z",
   "packs": [
     {
       "slug": "delta-basics",
@@ -18,6 +18,78 @@
       "download": {
         "type": "zip",
         "url": "https://github.com/21press/delta-icon-packs/releases/download/delta-basics-1.0.0/delta-basics.zip"
+      }
+    },
+    {
+      "slug": "heroicons-micro",
+      "name": "Heroicons Micro",
+      "description": "16×16 solid micro icons from Heroicons by Tailwind Labs.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 316,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://heroicons.com",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-micro-1.0.0/heroicons-micro.zip"
+      }
+    },
+    {
+      "slug": "heroicons-mini",
+      "name": "Heroicons Mini",
+      "description": "20×20 solid mini icons from Heroicons by Tailwind Labs.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 324,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://heroicons.com",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-mini-1.0.0/heroicons-mini.zip"
+      }
+    },
+    {
+      "slug": "heroicons-outline",
+      "name": "Heroicons Outline",
+      "description": "24×24 outline icons (1.5px stroke) from Heroicons by Tailwind Labs.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 324,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://heroicons.com",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-outline-1.0.0/heroicons-outline.zip"
+      }
+    },
+    {
+      "slug": "heroicons-solid",
+      "name": "Heroicons Solid",
+      "description": "24×24 solid icons from Heroicons by Tailwind Labs.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "iconCount": 324,
+      "previewIcons": [
+        "home",
+        "heart",
+        "user"
+      ],
+      "homepage": "https://heroicons.com",
+      "download": {
+        "type": "zip",
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/heroicons-solid-1.0.0/heroicons-solid.zip"
       }
     }
   ]

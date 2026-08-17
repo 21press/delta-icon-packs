@@ -36,6 +36,20 @@ npm run prepare:pack -- {slug}
 6. Confirm `index.json` `download.url` matches the release asset URL.
 7. Merge to `main`. Delta sites: **Icons → Packs → Refresh** (or wait ~12h cache TTL).
 
+### Heroicons (from `temp/heroicons`)
+
+Upstream tree: `24/outline`, `24/solid`, `20/solid`, `16/solid`. Import rewrites hard-coded fills/strokes to `currentColor` and builds **four** packs (zip install flattens by basename — styles cannot share one pack):
+
+```bash
+npm run import:heroicons
+npm run prepare:pack -- heroicons-outline
+npm run prepare:pack -- heroicons-solid
+npm run prepare:pack -- heroicons-mini
+npm run prepare:pack -- heroicons-micro
+```
+
+Release tags: `heroicons-outline-1.0.0`, `heroicons-solid-1.0.0`, `heroicons-mini-1.0.0`, `heroicons-micro-1.0.0` (attach matching `dist/*.zip`).
+
 CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
 
 | Script | What |
