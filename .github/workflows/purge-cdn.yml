@@ -1,0 +1,20 @@
+name: Purge jsDelivr catalog
+
+# Runs when a GitHub Release is published (not on bare tag push).
+# Catalog index is @main/index.json; install zips come from Release assets.
+# Push updated index.json to main before publishing the Release.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Purge catalog CDN cache
+        run: npm run purge:cdn

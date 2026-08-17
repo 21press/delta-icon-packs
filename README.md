@@ -32,9 +32,11 @@ npm run prepare:pack -- {slug}
 2. `npm run validate`
 3. `npm run build:index` (updates `index.json`)
 4. `npm run zip -- {slug}` → `dist/{slug}.zip`
-5. Create a GitHub Release tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `{slug}.zip`.
-6. Confirm `index.json` `download.url` matches the release asset URL.
-7. Merge to `main`. Delta sites: **Icons → Packs → Refresh** (or wait ~12h cache TTL).
+5. Merge `index.json` to `main` first (catalog is `@main` via jsDelivr — not the Release tag).
+6. Create a **GitHub Release** (published release, not a bare tag) tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `{slug}.zip`.
+7. Confirm `index.json` `download.url` matches the release asset URL.
+8. On Release **published**, CI runs `npm run purge:cdn` (busts jsDelivr for `index.json`). Manual: `npm run purge:cdn`.
+9. Delta sites: **Icons → Packs → Refresh** (WordPress transient only — CDN already purged).
 
 ### Heroicons (from `temp/heroicons`)
 
@@ -97,6 +99,7 @@ CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
 | `npm run zip:basics` | Zip sample `delta-basics` |
 | `npm run prepare:pack -- <slug>` | validate + index + zip |
 | `npm run check` | CI gate (validate + index in sync) |
+| `npm run purge:cdn` | Purge jsDelivr cache for `@main/index.json` (also on Release published) |
 
 ## License
 
