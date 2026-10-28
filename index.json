@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T10:01:07.761Z",
+  "updatedAt": "2026-10-28T03:03:18.091Z",
   "packs": [
     {
       "slug": "feather",
@@ -96,25 +96,29 @@
       "slug": "lucide",
       "name": "Lucide",
       "description": "24×24 outline icons from Lucide (ISC).",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "ISC",
-      "iconCount": 1768,
+      "iconCount": 2176,
       "previewIcons": [
         "house",
-        "heart",
-        "user"
+        "home",
+        "heart"
       ],
       "homepage": "https://lucide.dev",
+      "upstream": {
+        "package": "lucide-static",
+        "version": "1.62.0"
+      },
       "download": {
         "type": "zip",
-        "url": "https://github.com/21press/delta-icon-packs/releases/download/lucide-1.0.0/lucide.zip"
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/lucide-1.1.0/lucide.zip"
       }
     },
     {
       "slug": "tabler-filled",
       "name": "Tabler Filled",
       "description": "24×24 filled icons from Tabler Icons.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "MIT",
       "iconCount": 1054,
       "previewIcons": [
@@ -123,27 +127,35 @@
         "user"
       ],
       "homepage": "https://tabler.io/icons",
+      "upstream": {
+        "package": "@tabler/icons",
+        "version": "3.50.0"
+      },
       "download": {
         "type": "zip",
-        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-filled-1.0.0/tabler-filled.zip"
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-filled-1.1.0/tabler-filled.zip"
       }
     },
     {
       "slug": "tabler-outline",
       "name": "Tabler Outline",
       "description": "24×24 outline icons (2px stroke) from Tabler Icons.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "MIT",
-      "iconCount": 5130,
+      "iconCount": 5203,
       "previewIcons": [
         "home",
         "heart",
         "user"
       ],
       "homepage": "https://tabler.io/icons",
+      "upstream": {
+        "package": "@tabler/icons",
+        "version": "3.50.0"
+      },
       "download": {
         "type": "zip",
-        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-outline-1.0.0/tabler-outline.zip"
+        "url": "https://github.com/21press/delta-icon-packs/releases/download/tabler-outline-1.1.0/tabler-outline.zip"
       }
     }
   ]

@@ -35,7 +35,7 @@ npm run prepare:pack -- {slug}
 5. Merge `index.json` to `main` first (catalog is `@main` via jsDelivr — not the Release tag).
 6. Create a **GitHub Release** (published release, not a bare tag) tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `{slug}.zip`.
 7. Confirm `index.json` `download.url` matches the release asset URL.
-8. On Release **published**, CI runs `npm run purge:cdn` (busts jsDelivr for `index.json`). Manual: `npm run purge:cdn`.
+8. On Release **published**, CI runs `npm run purge:cdn -- {tag}` (busts jsDelivr for `index.json` and that pack's `pack.json`, which single-icon installs read). Manual: `npm run purge:cdn -- {slug} [{slug} …]`.
 9. Delta sites: **Icons → Packs → Refresh** (WordPress transient only — CDN already purged).
 
 ### Heroicons (from `temp/heroicons`)
@@ -54,7 +54,15 @@ Release tags: `heroicons-outline-1.0.0`, `heroicons-solid-1.0.0`, `heroicons-min
 
 ### Tabler Icons (from `temp/tablericons`)
 
-Upstream tree: `outline/`, `filled/`. Builds **two** packs:
+Source: the `@tabler/icons` npm package. Put its `icons/outline/`, `icons/filled/` and `package.json` in `temp/tablericons/` (the import records the package version in `pack.json` and `index.json` as `upstream`):
+
+```bash
+npm pack @tabler/icons@3.50.0 --pack-destination /tmp/tabler && tar -xzf /tmp/tabler/tabler-icons-3.50.0.tgz -C /tmp/tabler
+rm -rf temp/tablericons && mkdir -p temp/tablericons
+cp -R /tmp/tabler/package/icons/outline /tmp/tabler/package/icons/filled /tmp/tabler/package/package.json temp/tablericons/
+```
+
+Builds **two** packs. The import empties each pack's `icons/` first (an icon upstream renamed or removed leaves the pack) and drops the npm build's root `class` and invisible bounding path:
 
 ```bash
 npm run import:tablericons
@@ -62,20 +70,20 @@ npm run prepare:pack -- tabler-outline
 npm run prepare:pack -- tabler-filled
 ```
 
-Release tags: `tabler-outline-1.0.0`, `tabler-filled-1.0.0`.
+Release tags: `tabler-outline-1.1.0`, `tabler-filled-1.1.0` (built from `@tabler/icons` 3.50.0; bump `VERSION` in the import script for each refresh).
 
 > Note: outline has ~5k icons. Delta zip install allows up to 10k entries / 64 MB uncompressed.
 
 ### Lucide (from `temp/lucideicons`)
 
-Flat SVG folder — one pack:
+Source: the `lucide-static` npm package. Put its `icons/*.svg` and `package.json` in `temp/lucideicons/` (flat), the same way as Tabler. One pack:
 
 ```bash
 npm run import:lucideicons
 npm run prepare:pack -- lucide
 ```
 
-Release tag: `lucide-1.0.0`.
+Release tag: `lucide-1.1.0` (built from `lucide-static` 1.62.0).
 
 ### Feather (from `temp/feathericons`)
 
@@ -99,7 +107,7 @@ CI runs `npm run check` (validate + rebuild index + fail if `index.json` dirty).
 | `npm run zip:basics` | Zip sample `delta-basics` |
 | `npm run prepare:pack -- <slug>` | validate + index + zip |
 | `npm run check` | CI gate (validate + index in sync) |
-| `npm run purge:cdn` | Purge jsDelivr cache for `@main/index.json` (also on Release published) |
+| `npm run purge:cdn -- [slug …]` | Purge jsDelivr cache for `@main/index.json` and the named packs' `pack.json` (also on Release published) |
 
 ## License
 

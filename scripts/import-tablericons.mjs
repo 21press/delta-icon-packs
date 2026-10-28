@@ -28,7 +28,7 @@ const VARIANTS = [
 ];
 
 const HOMEPAGE = 'https://tabler.io/icons';
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 const LICENSE = 'MIT';
 
 const PACK_README = `# {{name}}
@@ -37,10 +37,26 @@ Icons from [Tabler Icons](https://tabler.io/icons).
 
 - License: MIT (see upstream Tabler Icons license)
 - Pack version: {{version}}
+- Built from: {{upstream}}
 - Style: {{style}}
 
 Used with Delta Icon Manager as \`{{icon:{{slug}}/icon-name}}\`.
 `;
+
+/**
+ * Upstream package and version, from the package.json copied into temp/ with the SVGs.
+ */
+function upstream() {
+	const file = path.join( srcRoot, 'package.json' );
+	if ( ! fs.existsSync( file ) ) {
+		throw new Error( `Missing ${ file } — copy the @tabler/icons package.json next to the SVGs.` );
+	}
+	const pkg = JSON.parse( fs.readFileSync( file, 'utf8' ) );
+	if ( pkg.name !== '@tabler/icons' ) {
+		throw new Error( `Expected @tabler/icons, found ${ pkg.name } in ${ file }` );
+	}
+	return { package: pkg.name, version: pkg.version };
+}
 
 function titleCase( slug ) {
 	return slug
@@ -59,6 +75,10 @@ function toCurrentColor( svg ) {
 
 function cleanSvg( svg ) {
 	let out = svg.replace( /<!--[\s\S]*?-->/g, '' ).trim();
+	// The npm build adds a class (a generic "icon" a site's CSS may already style) and an
+	// invisible 24×24 bounding path; the pack keeps the plain drawing, as installed icons have it.
+	out = out.replace( /<svg\b[^>]*>/, ( tag ) => tag.replace( /\s+class="[^"]*"/, '' ) );
+	out = out.replace( /[ \t]*<path stroke="none" d="M0 0h24v24H0z" fill="none"\s*\/>\n?/, '' );
 	out = toCurrentColor( out );
 	return out.endsWith( '\n' ) ? out : out + '\n';
 }
@@ -70,6 +90,8 @@ function writePack( variant ) {
 
 	const packRoot = path.join( root, 'packs', variant.slug );
 	const iconsDir = path.join( packRoot, 'icons' );
+	// Start empty: an icon upstream renamed or removed must not stay in the pack.
+	fs.rmSync( iconsDir, { recursive: true, force: true } );
 	fs.mkdirSync( iconsDir, { recursive: true } );
 
 	const files = fs
@@ -98,6 +120,7 @@ function writePack( variant ) {
 		version: VERSION,
 		license: LICENSE,
 		homepage: HOMEPAGE,
+		upstream: upstream(),
 		description: variant.description,
 		previewIcons: previewWanted.filter( ( s ) => have.has( s ) ),
 		icons,
@@ -115,6 +138,7 @@ function writePack( variant ) {
 			.replaceAll( '{{version}}', VERSION )
 			.replaceAll( '{{style}}', style )
 			.replaceAll( '{{slug}}', variant.slug )
+			.replaceAll( '{{upstream}}', `${ pack.upstream.package } ${ pack.upstream.version }` )
 	);
 
 	return icons.length;

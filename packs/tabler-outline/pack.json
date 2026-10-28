@@ -1,9 +1,13 @@
 {
   "slug": "tabler-outline",
   "name": "Tabler Outline",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "homepage": "https://tabler.io/icons",
+  "upstream": {
+    "package": "@tabler/icons",
+    "version": "3.50.0"
+  },
   "description": "24×24 outline icons (2px stroke) from Tabler Icons.",
   "previewIcons": [
     "home",
@@ -287,6 +291,16 @@
       "file": "icons/air-traffic-control.svg"
     },
     {
+      "slug": "airpods-l",
+      "name": "Airpods L",
+      "file": "icons/airpods-l.svg"
+    },
+    {
+      "slug": "airpods-r",
+      "name": "Airpods R",
+      "file": "icons/airpods-r.svg"
+    },
+    {
       "slug": "alarm-average",
       "name": "Alarm Average",
       "file": "icons/alarm-average.svg"
@@ -532,9 +546,29 @@
       "file": "icons/alphabet-bangla.svg"
     },
     {
+      "slug": "alphabet-chinese",
+      "name": "Alphabet Chinese",
+      "file": "icons/alphabet-chinese.svg"
+    },
+    {
       "slug": "alphabet-cyrillic",
       "name": "Alphabet Cyrillic",
       "file": "icons/alphabet-cyrillic.svg"
+    },
+    {
+      "slug": "alphabet-devanagari",
+      "name": "Alphabet Devanagari",
+      "file": "icons/alphabet-devanagari.svg"
+    },
+    {
+      "slug": "alphabet-ethiopic",
+      "name": "Alphabet Ethiopic",
+      "file": "icons/alphabet-ethiopic.svg"
+    },
+    {
+      "slug": "alphabet-georgian",
+      "name": "Alphabet Georgian",
+      "file": "icons/alphabet-georgian.svg"
     },
     {
       "slug": "alphabet-greek",
@@ -545,6 +579,11 @@
       "slug": "alphabet-hebrew",
       "name": "Alphabet Hebrew",
       "file": "icons/alphabet-hebrew.svg"
+    },
+    {
+      "slug": "alphabet-japanese",
+      "name": "Alphabet Japanese",
+      "file": "icons/alphabet-japanese.svg"
     },
     {
       "slug": "alphabet-korean",
@@ -740,6 +779,11 @@
       "slug": "archive-off",
       "name": "Archive Off",
       "file": "icons/archive-off.svg"
+    },
+    {
+      "slug": "archive-restore",
+      "name": "Archive Restore",
+      "file": "icons/archive-restore.svg"
     },
     {
       "slug": "archive",
@@ -2367,6 +2411,11 @@
       "file": "icons/battery.svg"
     },
     {
+      "slug": "beach-bag",
+      "name": "Beach Bag",
+      "file": "icons/beach-bag.svg"
+    },
+    {
       "slug": "beach-off",
       "name": "Beach Off",
       "file": "icons/beach-off.svg"
@@ -2622,6 +2671,11 @@
       "file": "icons/blind.svg"
     },
     {
+      "slug": "blob-dashed",
+      "name": "Blob Dashed",
+      "file": "icons/blob-dashed.svg"
+    },
+    {
       "slug": "blob",
       "name": "Blob",
       "file": "icons/blob.svg"
@@ -2725,6 +2779,11 @@
       "slug": "book-2",
       "name": "Book 2",
       "file": "icons/book-2.svg"
+    },
+    {
+      "slug": "book-clone",
+      "name": "Book Clone",
+      "file": "icons/book-clone.svg"
     },
     {
       "slug": "book-download",
@@ -4162,6 +4221,11 @@
       "file": "icons/brand-miniprogram.svg"
     },
     {
+      "slug": "brand-misskey",
+      "name": "Brand Misskey",
+      "file": "icons/brand-misskey.svg"
+    },
+    {
       "slug": "brand-mixpanel",
       "name": "Brand Mixpanel",
       "file": "icons/brand-mixpanel.svg"
@@ -4825,6 +4889,11 @@
       "slug": "brand-vercel",
       "name": "Brand Vercel",
       "file": "icons/brand-vercel.svg"
+    },
+    {
+      "slug": "brand-viber",
+      "name": "Brand Viber",
+      "file": "icons/brand-viber.svg"
     },
     {
       "slug": "brand-vimeo",
@@ -6057,6 +6126,11 @@
       "file": "icons/cash-banknote.svg"
     },
     {
+      "slug": "cash-coin",
+      "name": "Cash Coin",
+      "file": "icons/cash-coin.svg"
+    },
+    {
       "slug": "cash-edit",
       "name": "Cash Edit",
       "file": "icons/cash-edit.svg"
@@ -7102,6 +7176,11 @@
       "file": "icons/circle-half.svg"
     },
     {
+      "slug": "circle-heart",
+      "name": "Circle Heart",
+      "file": "icons/circle-heart.svg"
+    },
+    {
       "slug": "circle-key",
       "name": "Circle Key",
       "file": "icons/circle-key.svg"
@@ -7322,9 +7401,19 @@
       "file": "icons/circle-open-arrow-up.svg"
     },
     {
+      "slug": "circle-pause",
+      "name": "Circle Pause",
+      "file": "icons/circle-pause.svg"
+    },
+    {
       "slug": "circle-percentage",
       "name": "Circle Percentage",
       "file": "icons/circle-percentage.svg"
+    },
+    {
+      "slug": "circle-play",
+      "name": "Circle Play",
+      "file": "icons/circle-play.svg"
     },
     {
       "slug": "circle-plus-2",
@@ -7355,6 +7444,11 @@
       "slug": "circle-square",
       "name": "Circle Square",
       "file": "icons/circle-square.svg"
+    },
+    {
+      "slug": "circle-stop",
+      "name": "Circle Stop",
+      "file": "icons/circle-stop.svg"
     },
     {
       "slug": "circle-triangle",
@@ -9167,6 +9261,11 @@
       "file": "icons/deaf.svg"
     },
     {
+      "slug": "decagram",
+      "name": "Decagram",
+      "file": "icons/decagram.svg"
+    },
+    {
       "slug": "decimal",
       "name": "Decimal",
       "file": "icons/decimal.svg"
@@ -10732,6 +10831,11 @@
       "file": "icons/dumpling.svg"
     },
     {
+      "slug": "duplicate",
+      "name": "Duplicate",
+      "file": "icons/duplicate.svg"
+    },
+    {
       "slug": "e-passport",
       "name": "E Passport",
       "file": "icons/e-passport.svg"
@@ -10785,6 +10889,11 @@
       "slug": "ease-out",
       "name": "Ease Out",
       "file": "icons/ease-out.svg"
+    },
+    {
+      "slug": "edit-bulk",
+      "name": "Edit Bulk",
+      "file": "icons/edit-bulk.svg"
     },
     {
       "slug": "edit-circle-off",
@@ -11405,6 +11514,11 @@
       "slug": "file-like",
       "name": "File Like",
       "file": "icons/file-like.svg"
+    },
+    {
+      "slug": "file-lock",
+      "name": "File Lock",
+      "file": "icons/file-lock.svg"
     },
     {
       "slug": "file-minus",
@@ -12287,6 +12401,11 @@
       "file": "icons/fold.svg"
     },
     {
+      "slug": "folder-ai",
+      "name": "Folder Ai",
+      "file": "icons/folder-ai.svg"
+    },
+    {
       "slug": "folder-bolt",
       "name": "Folder Bolt",
       "file": "icons/folder-bolt.svg"
@@ -12330,6 +12449,11 @@
       "slug": "folder-heart",
       "name": "Folder Heart",
       "file": "icons/folder-heart.svg"
+    },
+    {
+      "slug": "folder-lock",
+      "name": "Folder Lock",
+      "file": "icons/folder-lock.svg"
     },
     {
       "slug": "folder-minus",
@@ -12382,9 +12506,19 @@
       "file": "icons/folder-share.svg"
     },
     {
+      "slug": "folder-sparkle",
+      "name": "Folder Sparkle",
+      "file": "icons/folder-sparkle.svg"
+    },
+    {
       "slug": "folder-star",
       "name": "Folder Star",
       "file": "icons/folder-star.svg"
+    },
+    {
+      "slug": "folder-stats",
+      "name": "Folder Stats",
+      "file": "icons/folder-stats.svg"
     },
     {
       "slug": "folder-symlink",
@@ -12395,6 +12529,11 @@
       "slug": "folder-up",
       "name": "Folder Up",
       "file": "icons/folder-up.svg"
+    },
+    {
+      "slug": "folder-user",
+      "name": "Folder User",
+      "file": "icons/folder-user.svg"
     },
     {
       "slug": "folder-x",
@@ -12702,9 +12841,19 @@
       "file": "icons/gift.svg"
     },
     {
+      "slug": "git-branch-check",
+      "name": "Git Branch Check",
+      "file": "icons/git-branch-check.svg"
+    },
+    {
       "slug": "git-branch-deleted",
       "name": "Git Branch Deleted",
       "file": "icons/git-branch-deleted.svg"
+    },
+    {
+      "slug": "git-branch-x",
+      "name": "Git Branch X",
+      "file": "icons/git-branch-x.svg"
     },
     {
       "slug": "git-branch",
@@ -12732,9 +12881,24 @@
       "file": "icons/git-fork.svg"
     },
     {
+      "slug": "git-merge-ai",
+      "name": "Git Merge Ai",
+      "file": "icons/git-merge-ai.svg"
+    },
+    {
+      "slug": "git-merge-queue",
+      "name": "Git Merge Queue",
+      "file": "icons/git-merge-queue.svg"
+    },
+    {
       "slug": "git-merge",
       "name": "Git Merge",
       "file": "icons/git-merge.svg"
+    },
+    {
+      "slug": "git-pull-request-closed-ai",
+      "name": "Git Pull Request Closed Ai",
+      "file": "icons/git-pull-request-closed-ai.svg"
     },
     {
       "slug": "git-pull-request-closed",
@@ -12747,9 +12911,29 @@
       "file": "icons/git-pull-request-conflict.svg"
     },
     {
+      "slug": "git-pull-request-draft-ai",
+      "name": "Git Pull Request Draft Ai",
+      "file": "icons/git-pull-request-draft-ai.svg"
+    },
+    {
       "slug": "git-pull-request-draft",
       "name": "Git Pull Request Draft",
       "file": "icons/git-pull-request-draft.svg"
+    },
+    {
+      "slug": "git-pull-request-locked-ai",
+      "name": "Git Pull Request Locked Ai",
+      "file": "icons/git-pull-request-locked-ai.svg"
+    },
+    {
+      "slug": "git-pull-request-locked",
+      "name": "Git Pull Request Locked",
+      "file": "icons/git-pull-request-locked.svg"
+    },
+    {
+      "slug": "git-pull-request-unlisted",
+      "name": "Git Pull Request Unlisted",
+      "file": "icons/git-pull-request-unlisted.svg"
     },
     {
       "slug": "git-pull-request",
@@ -12820,6 +13004,16 @@
       "slug": "gps",
       "name": "Gps",
       "file": "icons/gps.svg"
+    },
+    {
+      "slug": "gpu-2",
+      "name": "Gpu 2",
+      "file": "icons/gpu-2.svg"
+    },
+    {
+      "slug": "gpu",
+      "name": "Gpu",
+      "file": "icons/gpu.svg"
     },
     {
       "slug": "gradienter",
@@ -14802,6 +14996,16 @@
       "file": "icons/lemon.svg"
     },
     {
+      "slug": "lens-concave",
+      "name": "Lens Concave",
+      "file": "icons/lens-concave.svg"
+    },
+    {
+      "slug": "lens-convex",
+      "name": "Lens Convex",
+      "file": "icons/lens-convex.svg"
+    },
+    {
       "slug": "letter-a-small",
       "name": "Letter A Small",
       "file": "icons/letter-a-small.svg"
@@ -15597,6 +15801,11 @@
       "file": "icons/lollipop.svg"
     },
     {
+      "slug": "loop",
+      "name": "Loop",
+      "file": "icons/loop.svg"
+    },
+    {
       "slug": "luggage-off",
       "name": "Luggage Off",
       "file": "icons/luggage-off.svg"
@@ -15992,6 +16201,16 @@
       "file": "icons/map-pin.svg"
     },
     {
+      "slug": "map-pinned",
+      "name": "Map Pinned",
+      "file": "icons/map-pinned.svg"
+    },
+    {
+      "slug": "map-pins-off",
+      "name": "Map Pins Off",
+      "file": "icons/map-pins-off.svg"
+    },
+    {
       "slug": "map-pins",
       "name": "Map Pins",
       "file": "icons/map-pins.svg"
@@ -16322,6 +16541,11 @@
       "file": "icons/maximize.svg"
     },
     {
+      "slug": "mcp",
+      "name": "Mcp",
+      "file": "icons/mcp.svg"
+    },
+    {
       "slug": "meat-off",
       "name": "Meat Off",
       "file": "icons/meat-off.svg"
@@ -16372,6 +16596,11 @@
       "file": "icons/melon.svg"
     },
     {
+      "slug": "memory",
+      "name": "Memory",
+      "file": "icons/memory.svg"
+    },
+    {
       "slug": "menorah",
       "name": "Menorah",
       "file": "icons/menorah.svg"
@@ -16410,6 +16639,11 @@
       "slug": "mesh",
       "name": "Mesh",
       "file": "icons/mesh.svg"
+    },
+    {
+      "slug": "message-2-ai",
+      "name": "Message 2 Ai",
+      "file": "icons/message-2-ai.svg"
     },
     {
       "slug": "message-2-bolt",
@@ -16497,6 +16731,11 @@
       "file": "icons/message-2-share.svg"
     },
     {
+      "slug": "message-2-sparkle",
+      "name": "Message 2 Sparkle",
+      "file": "icons/message-2-sparkle.svg"
+    },
+    {
       "slug": "message-2-star",
       "name": "Message 2 Star",
       "file": "icons/message-2-star.svg"
@@ -16515,6 +16754,11 @@
       "slug": "message-2",
       "name": "Message 2",
       "file": "icons/message-2.svg"
+    },
+    {
+      "slug": "message-ai",
+      "name": "Message Ai",
+      "file": "icons/message-ai.svg"
     },
     {
       "slug": "message-bolt",
@@ -16742,6 +16986,11 @@
       "file": "icons/message-share.svg"
     },
     {
+      "slug": "message-sparkle",
+      "name": "Message Sparkle",
+      "file": "icons/message-sparkle.svg"
+    },
+    {
       "slug": "message-star",
       "name": "Message Star",
       "file": "icons/message-star.svg"
@@ -16930,6 +17179,11 @@
       "slug": "mobiledata",
       "name": "Mobiledata",
       "file": "icons/mobiledata.svg"
+    },
+    {
+      "slug": "model-ai",
+      "name": "Model Ai",
+      "file": "icons/model-ai.svg"
     },
     {
       "slug": "moneybag-edit",
@@ -18377,9 +18631,29 @@
       "file": "icons/omega.svg"
     },
     {
+      "slug": "opacity",
+      "name": "Opacity",
+      "file": "icons/opacity.svg"
+    },
+    {
       "slug": "option",
       "name": "Option",
       "file": "icons/option.svg"
+    },
+    {
+      "slug": "orbit-vertical",
+      "name": "Orbit Vertical",
+      "file": "icons/orbit-vertical.svg"
+    },
+    {
+      "slug": "orbit",
+      "name": "Orbit",
+      "file": "icons/orbit.svg"
+    },
+    {
+      "slug": "orbits",
+      "name": "Orbits",
+      "file": "icons/orbits.svg"
     },
     {
       "slug": "outbound",
@@ -18582,6 +18856,11 @@
       "file": "icons/peace.svg"
     },
     {
+      "slug": "pencil-ai",
+      "name": "Pencil Ai",
+      "file": "icons/pencil-ai.svg"
+    },
+    {
       "slug": "pencil-bolt",
       "name": "Pencil Bolt",
       "file": "icons/pencil-bolt.svg"
@@ -18660,6 +18939,11 @@
       "slug": "pencil-question",
       "name": "Pencil Question",
       "file": "icons/pencil-question.svg"
+    },
+    {
+      "slug": "pencil-ruler",
+      "name": "Pencil Ruler",
+      "file": "icons/pencil-ruler.svg"
     },
     {
       "slug": "pencil-search",
@@ -20222,6 +20506,16 @@
       "file": "icons/recycle.svg"
     },
     {
+      "slug": "reduce-motion",
+      "name": "Reduce Motion",
+      "file": "icons/reduce-motion.svg"
+    },
+    {
+      "slug": "reference-image",
+      "name": "Reference Image",
+      "file": "icons/reference-image.svg"
+    },
+    {
       "slug": "refresh-alert",
       "name": "Refresh Alert",
       "file": "icons/refresh-alert.svg"
@@ -21052,6 +21346,11 @@
       "file": "icons/search.svg"
     },
     {
+      "slug": "secret-phrases",
+      "name": "Secret Phrases",
+      "file": "icons/secret-phrases.svg"
+    },
+    {
       "slug": "section-sign",
       "name": "Section Sign",
       "file": "icons/section-sign.svg"
@@ -21857,6 +22156,11 @@
       "file": "icons/smoking.svg"
     },
     {
+      "slug": "snail",
+      "name": "Snail",
+      "file": "icons/snail.svg"
+    },
+    {
       "slug": "snowboarding",
       "name": "Snowboarding",
       "file": "icons/snowboarding.svg"
@@ -22220,6 +22524,16 @@
       "slug": "square-chevrons-up",
       "name": "Square Chevrons Up",
       "file": "icons/square-chevrons-up.svg"
+    },
+    {
+      "slug": "square-dashed-top-solid",
+      "name": "Square Dashed Top Solid",
+      "file": "icons/square-dashed-top-solid.svg"
+    },
+    {
+      "slug": "square-dashed-x",
+      "name": "Square Dashed X",
+      "file": "icons/square-dashed-x.svg"
     },
     {
       "slug": "square-dashed",
@@ -22882,6 +23196,11 @@
       "file": "icons/stack-backward.svg"
     },
     {
+      "slug": "stack-check",
+      "name": "Stack Check",
+      "file": "icons/stack-check.svg"
+    },
+    {
       "slug": "stack-forward",
       "name": "Stack Forward",
       "file": "icons/stack-forward.svg"
@@ -22897,6 +23216,16 @@
       "file": "icons/stack-middle.svg"
     },
     {
+      "slug": "stack-minus",
+      "name": "Stack Minus",
+      "file": "icons/stack-minus.svg"
+    },
+    {
+      "slug": "stack-plus",
+      "name": "Stack Plus",
+      "file": "icons/stack-plus.svg"
+    },
+    {
       "slug": "stack-pop",
       "name": "Stack Pop",
       "file": "icons/stack-pop.svg"
@@ -22905,6 +23234,11 @@
       "slug": "stack-push",
       "name": "Stack Push",
       "file": "icons/stack-push.svg"
+    },
+    {
+      "slug": "stack-x",
+      "name": "Stack X",
+      "file": "icons/stack-x.svg"
     },
     {
       "slug": "stack",
@@ -23000,6 +23334,11 @@
       "slug": "sticker-2",
       "name": "Sticker 2",
       "file": "icons/sticker-2.svg"
+    },
+    {
+      "slug": "sticker-smile",
+      "name": "Sticker Smile",
+      "file": "icons/sticker-smile.svg"
     },
     {
       "slug": "sticker",
@@ -24242,6 +24581,11 @@
       "file": "icons/trending-up.svg"
     },
     {
+      "slug": "triangle-dashed",
+      "name": "Triangle Dashed",
+      "file": "icons/triangle-dashed.svg"
+    },
+    {
       "slug": "triangle-inverted",
       "name": "Triangle Inverted",
       "file": "icons/triangle-inverted.svg"
@@ -24877,6 +25221,16 @@
       "file": "icons/vocabulary.svg"
     },
     {
+      "slug": "voice-2",
+      "name": "Voice 2",
+      "file": "icons/voice-2.svg"
+    },
+    {
+      "slug": "voice",
+      "name": "Voice",
+      "file": "icons/voice.svg"
+    },
+    {
       "slug": "volcano",
       "name": "Volcano",
       "file": "icons/volcano.svg"
@@ -25127,6 +25481,11 @@
       "file": "icons/wave-square.svg"
     },
     {
+      "slug": "waveform",
+      "name": "Waveform",
+      "file": "icons/waveform.svg"
+    },
+    {
       "slug": "waves-electricity",
       "name": "Waves Electricity",
       "file": "icons/waves-electricity.svg"
@@ -25335,6 +25694,11 @@
       "slug": "world-longitude",
       "name": "World Longitude",
       "file": "icons/world-longitude.svg"
+    },
+    {
+      "slug": "world-map-off",
+      "name": "World Map Off",
+      "file": "icons/world-map-off.svg"
     },
     {
       "slug": "world-map",
@@ -25650,6 +26014,11 @@
       "slug": "zoom",
       "name": "Zoom",
       "file": "icons/zoom.svg"
+    },
+    {
+      "slug": "zsh",
+      "name": "Zsh",
+      "file": "icons/zsh.svg"
     },
     {
       "slug": "zzz-off",

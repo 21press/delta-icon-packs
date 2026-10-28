@@ -53,6 +53,8 @@ for ( const dir of fs.readdirSync( packsDir ).sort() ) {
 		iconCount: iconSlugs.length,
 		previewIcons: preview,
 		homepage: pack.homepage || '',
+		// The upstream release a pack is built from, so the catalog says how current it is.
+		...( pack.upstream ? { upstream: pack.upstream } : {} ),
 		download: {
 			type: 'zip',
 			url: prev.download?.url && prev.version === pack.version ? prev.download.url : defaultUrl,
