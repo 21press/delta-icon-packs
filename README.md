@@ -35,7 +35,7 @@ npm run prepare:pack -- {slug}
 5. Merge `index.json` to `main` first (catalog is `@main` via jsDelivr — not the Release tag).
 6. Create a **GitHub Release** (published release, not a bare tag) tagged `{slug}-{version}` (e.g. `delta-basics-1.0.0`) and attach `dist/{slug}.zip` as `{slug}.zip`.
 7. Confirm `index.json` `download.url` matches the release asset URL.
-8. On Release **published**, CI runs `npm run purge:cdn -- {tag}` (busts jsDelivr for `index.json` and that pack's `pack.json`, which single-icon installs read). Manual: `npm run purge:cdn -- {slug} [{slug} …]`.
+8. On Release **published**, CI runs `npm run purge:cdn -- {tag}` (busts jsDelivr for `index.json` and that pack's `pack.json`, which single-icon installs read). It then checks that the CDN serves `main`'s copy and purges again until it does (jsDelivr can lag a push by minutes), failing after 10 checks 30s apart. Manual: `npm run purge:cdn -- {slug} [{slug} …]` from an up-to-date `main`.
 9. Delta sites: **Icons → Packs → Refresh** (WordPress transient only — CDN already purged).
 
 ### Heroicons (from `temp/heroicons`)

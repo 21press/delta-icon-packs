@@ -12,12 +12,18 @@ jobs:
   purge:
     runs-on: ubuntu-latest
     steps:
+      # main, not the release tag: the purge is for @main, and the script checks the CDN copy
+      # against these files.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      # index.json, and the released pack's pack.json (single-icon installs read it).
+      # index.json, and the released pack's pack.json (single-icon installs read it). Purges again
+      # until the CDN serves main's copy (jsDelivr may lag a push by minutes), up to 10 checks 30s apart.
       - name: Purge catalog CDN cache
+        timeout-minutes: 15
         run: npm run purge:cdn -- "$TAG"
         env:
           TAG: ${{ github.event.release.tag_name }}
